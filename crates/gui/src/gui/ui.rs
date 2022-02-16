@@ -1,7 +1,9 @@
 use adw::prelude::*;
 
 use adw::{ApplicationWindow};
-use gtk::{Application, Button};
+use gtk::{Application, Stack};
+
+use crate::gui::pages;
 
 pub fn build_ui(app: &Application) {
     let builder = gtk::Builder::from_string(include_str!("window.ui"));
@@ -9,15 +11,13 @@ pub fn build_ui(app: &Application) {
     let window: ApplicationWindow = builder
         .object("window")
         .expect("Could not get object `window` from builder.");
-    let button: Button = builder
-        .object("button")
-        .expect("Could not get object `button` from builder.");
+    let stack: Stack = builder
+        .object("stack")
+        .expect("Could not get object `stack` from builder.");
 
     window.set_application(Some(app));
 
-    button.connect_clicked(move |button| {
-        button.set_label("Hello World!");
-    });
+    stack.add_child(&pages::welcome::WelcomeCarousel::new());
 
     window.present();
 }
