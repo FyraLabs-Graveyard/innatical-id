@@ -9,7 +9,7 @@ fn main() {
     let _ = gresource::init();
 
     let application = Application::builder()
-        .application_id("org.innatical.id.settings")
+        .application_id("com.innatical.id.settings")
         .build();
 
     application.connect_startup(|_| {
