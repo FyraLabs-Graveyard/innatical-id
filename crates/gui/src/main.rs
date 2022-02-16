@@ -3,8 +3,11 @@ use gtk::{Application};
 
 pub mod gui;
 use gui::ui;
+mod gresource;
 
 fn main() {
+    let _ = gresource::init();
+
     let application = Application::builder()
         .application_id("org.innatical.id.settings")
         .build();
