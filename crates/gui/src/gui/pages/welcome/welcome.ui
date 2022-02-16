@@ -16,8 +16,7 @@
             <property name="allow-scroll-wheel">false</property>
             <property name="allow-long-swipes">false</property>
             <child>
-              <object class="AdwStatusPage">
-                <property name="icon-name">system-users</property>
+              <object class="AdwStatusPage" id="welcome_home">
                 <property name="title" translatable="yes">Welcome to Innatical ID</property>
                 <property name="description" translatable="yes">Add Description Here</property>
                 <property name="vexpand">True</property>

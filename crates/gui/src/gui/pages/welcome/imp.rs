@@ -8,7 +8,9 @@ use gtk::{glib, CompositeTemplate};
 #[template(file = "welcome.ui")]
 pub struct WelcomeCarousel {
     #[template_child]
-    pub lines_box: TemplateChild<adw::Bin>
+    pub lines_box: TemplateChild<adw::Bin>,
+    #[template_child]
+    pub welcome_home: TemplateChild<adw::StatusPage>
 }
 
 // The central trait for subclassing a GObject
@@ -27,6 +29,14 @@ impl ObjectSubclass for WelcomeCarousel {
     }
 }
 
-impl ObjectImpl for WelcomeCarousel {}
+impl ObjectImpl for WelcomeCarousel {
+    fn constructed(&self, obj: &Self::Type) {
+        // Call "constructed" on parent
+        self.parent_constructed(obj);
+
+        // Connect to "clicked" signal of `button`
+        self.welcome_home.set_paintable(gtk::Image::from_resource("/org/innatical/id/settings/icons/earth-americas").paintable().as_ref())
+    }
+}
 impl WidgetImpl for WelcomeCarousel {}
 impl BinImpl for WelcomeCarousel {}
