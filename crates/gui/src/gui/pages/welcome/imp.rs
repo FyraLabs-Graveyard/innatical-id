@@ -10,7 +10,9 @@ pub struct WelcomeCarousel {
     #[template_child]
     pub lines_box: TemplateChild<adw::Bin>,
     #[template_child]
-    pub welcome_home: TemplateChild<adw::StatusPage>
+    pub welcome_home: TemplateChild<adw::StatusPage>,
+    #[template_child]
+    pub welcome_webview: TemplateChild<adw::Bin>
 }
 
 // The central trait for subclassing a GObject
@@ -31,11 +33,10 @@ impl ObjectSubclass for WelcomeCarousel {
 
 impl ObjectImpl for WelcomeCarousel {
     fn constructed(&self, obj: &Self::Type) {
-        // Call "constructed" on parent
         self.parent_constructed(obj);
 
-        // Connect to "clicked" signal of `button`
-        self.welcome_home.set_paintable(gtk::Image::from_resource("/org/innatical/id/settings/icons/earth-americas").paintable().as_ref())
+        // fuck this, fuck you gtk
+        self.welcome_home.set_paintable(gtk::Image::from_resource("/org/innatical/id/settings/icons/earth-americas").paintable().as_ref());
     }
 }
 impl WidgetImpl for WelcomeCarousel {}
