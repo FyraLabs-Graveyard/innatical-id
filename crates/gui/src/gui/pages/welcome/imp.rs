@@ -3,7 +3,6 @@ use adw::subclass::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::{glib, CompositeTemplate};
 
-// Object holding the state
 #[derive(CompositeTemplate, Default)]
 #[template(file = "welcome.ui")]
 pub struct WelcomeCarousel {
@@ -15,7 +14,6 @@ pub struct WelcomeCarousel {
     pub welcome_webview: TemplateChild<adw::Bin>
 }
 
-// The central trait for subclassing a GObject
 #[glib::object_subclass]
 impl ObjectSubclass for WelcomeCarousel {
     const NAME: &'static str = "WelcomeCarousel";

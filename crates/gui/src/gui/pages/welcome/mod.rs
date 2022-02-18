@@ -11,7 +11,6 @@ glib::wrapper! {
 
 impl WelcomeCarousel {
     pub fn new() -> Self {
-        // Create new window
         Object::new(&[]).expect("Failed to create `WelcomeCarousel`.")
     }
 }
