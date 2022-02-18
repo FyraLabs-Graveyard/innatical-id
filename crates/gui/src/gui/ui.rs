@@ -17,7 +17,8 @@ pub fn build_ui(app: &Application) {
 
     window.set_application(Some(app));
 
-    stack.add_child(&pages::welcome::WelcomeCarousel::new());
+    // stack.add_child(&pages::welcome::WelcomeCarousel::new());
+    stack.add_child(&pages::settings::SettingsFlap::new());
 
     window.present();
 }

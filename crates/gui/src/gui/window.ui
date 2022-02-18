@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <object class="AdwApplicationWindow" id="window">
-    <property name="default-width">350</property>
+    <property name="default-width">450</property>
     <property name="content">
       <object class="GtkBox" id="box">
         <property name="orientation">vertical</property>
