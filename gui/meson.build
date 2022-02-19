@@ -3,6 +3,7 @@ sources = [
     'window.vala',
     'application.vala',
     'views/welcome.vala',
+    'views/settings.vala',
 ]
 
 deps = [

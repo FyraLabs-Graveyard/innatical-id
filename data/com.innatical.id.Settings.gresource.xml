@@ -3,6 +3,7 @@
   <gresource prefix="/com/innatical/id/Settings">
     <file alias="window.ui">ui/window.ui</file>
     <file alias="welcome.ui">ui/welcome.ui</file>
+    <file alias="settings.ui">ui/settings.ui</file>
     <file alias="earth-americas.svg">images/earth-americas.svg</file>
   </gresource>
 </gresources>
