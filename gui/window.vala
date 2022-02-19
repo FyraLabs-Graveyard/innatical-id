@@ -39,6 +39,9 @@
                 settings.destroy ();
             }
 
+            this.default_width = 650;
+            this.default_height = 650;
+
             settings = new Settings ();
             stack.add_child (settings);
             stack.visible_child = settings;
