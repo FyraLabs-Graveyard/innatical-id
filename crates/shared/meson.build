@@ -13,7 +13,7 @@ cargo_release = custom_target(
   'cargo-build',
   build_by_default: true,
   input: sources,
-  output: 'shared',
+  output: 'libinnaticalid',
   console: true,
   install: true,
   install_dir: get_option('bindir'),

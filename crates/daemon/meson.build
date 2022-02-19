@@ -12,7 +12,7 @@ cargo_release = custom_target(
   'cargo-build',
   build_by_default: true,
   input: sources,
-  output: 'daemon',
+  output: 'innatical-id-daemon',
   console: true,
   install: true,
   install_dir: get_option('bindir'),
