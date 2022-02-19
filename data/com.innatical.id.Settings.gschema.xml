@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="innatical-id">
+	<schema id="com.innatical.id.Settings" path="/com/innatical/id/Settings/">
+	</schema>
+</schemalist>
