@@ -1,0 +1,13 @@
+## THIS PACKAGE IS DESIGNED TO BE A CLI/DAEMON THAT IS EXECUTED BY SYSTEMD TO AUTOMATICALLY SYNC FILES
+
+[package]
+name = "daemon"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "3.0.14"
+directories = "4.0"
+shared = { path = "../shared" }
