@@ -13,6 +13,7 @@ You'll need the following dependencies:
 - `rustc`
 - `cargo`
 - `gtk4`
+- `libadwaita-1`
 
 Run `meson build` to configure the build environment. Change to the build directory and run `ninja test` to build and run automated tests.
 

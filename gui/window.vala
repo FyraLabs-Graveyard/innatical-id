@@ -18,10 +18,7 @@
 
  namespace InnaticalID {
 	[GtkTemplate (ui = "/com/innatical/id/Settings/window.ui")]
-	public class Window : Gtk.ApplicationWindow {
-		//  [GtkChild]
-		//  unowned Gtk.Label label;
-
+	public class Window : Adw.ApplicationWindow {
 		public Window (Gtk.Application app) {
 			Object (application: app);
 		}

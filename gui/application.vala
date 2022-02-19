@@ -17,10 +17,8 @@
  */
 
  namespace InnaticalID {
-	public class Application : Gtk.Application {
+	public class Application : Adw.Application {
 		private ActionEntry[] APP_ACTIONS = {
-			{ "about", on_about_action },
-			{ "preferences", on_preferences_action },
 			{ "quit", quit }
 		};
 
@@ -39,18 +37,6 @@
 				win = new InnaticalID.Window (this);
 			}
 			win.present ();
-		}
-
-		private void on_about_action () {
-			string[] authors = {"Innatical, LLC"};
-			Gtk.show_about_dialog(this.active_window,
-				                  "program-name", "Innatical ID Settings",
-				                  "authors", authors,
-				                  "version", "1.0.0");
-		}
-
-		private void on_preferences_action () {
-			message("app.preferences action activated");
 		}
 	}
 }
