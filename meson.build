@@ -4,4 +4,4 @@ project('innatical_id', 'rust',
         default_options: [ 'warning_level=2', ],
 )
 
-subdir('packages')
+subdir('crates')
