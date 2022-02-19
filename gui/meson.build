@@ -17,12 +17,12 @@ gnome.post_install(
 
 sources += gnome.compile_resources(
     'resources',
-    meson.project_name() + '.gresource.xml',
+    'com.innatical.id.Settings.gresource.xml',
     c_name: 'innatical_id',
 )
 
 executable(
-    meson.project_name(),
+    meson.project_name() + '-settings',
     sources,
     vala_args: '--target-glib=2.50',
     dependencies: deps,

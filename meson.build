@@ -5,6 +5,7 @@ project('innatical-id', [ 'rust', 'vala', 'c' ],
 )
 
 i18n = import('i18n')
+subdir('po')
 
 # Rust
 subdir('crates')
