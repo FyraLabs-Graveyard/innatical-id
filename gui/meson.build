@@ -2,6 +2,7 @@ sources = [
     'main.vala',
     'window.vala',
     'application.vala',
+    'views/welcome.vala',
 ]
 
 deps = [
@@ -16,15 +17,16 @@ gnome.post_install(
   update_desktop_database: true,
 )
 
-sources += gnome.compile_resources(
-    'resources',
-    'com.innatical.id.Settings.gresource.xml',
-    c_name: 'innatical_id',
+asresources = gnome.compile_resources(
+    'as-resources', join_paths(meson.project_source_root(), 'data/com.innatical.id.Settings.gresource.xml'),
+    source_dir: join_paths(meson.project_source_root(), 'data'),
+    c_name: 'as'
 )
 
 executable(
     meson.project_name() + '-settings',
     sources,
+    asresources,
     vala_args: '--target-glib=2.50',
     dependencies: deps,
     install: true,

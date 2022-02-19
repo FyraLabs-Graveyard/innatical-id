@@ -1,4 +1,4 @@
-/* window.vala
+/* views/welcome.vala
  *
  * Copyright 2022 Innatical, LLC
  *
@@ -17,16 +17,17 @@
  */
 
  namespace InnaticalID {
-	[GtkTemplate (ui = "/com/innatical/id/Settings/window.ui")]
-	public class Window : Adw.ApplicationWindow {
+	[GtkTemplate (ui = "/com/innatical/id/Settings/welcome.ui")]
+	public class Welcome : Adw.Bin {
         [GtkChild]
-		unowned Gtk.Stack stack;
+		unowned Adw.StatusPage welcome_home;
 
-		public Window (Adw.Application app) {
-			Object (application: app);
+		public Welcome () {
+			Object ();
 
-            var welcome = new InnaticalID.Welcome ();
-            stack.add_child (welcome);
+            var image = new Gtk.Image.from_resource ("/com/innatical/id/Settings/earth-americas.svg").get_paintable();
+
+            welcome_home.set_paintable (image);
 		}
 	}
 }
