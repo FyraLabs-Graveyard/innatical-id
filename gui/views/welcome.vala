@@ -21,12 +21,22 @@
 	public class Welcome : Adw.Bin {
         [GtkChild]
 		unowned Adw.StatusPage welcome_home;
+        [GtkChild]
+		unowned Gtk.Button main_ui_btn;
+
+        public signal void to_main_ui ();
 
 		public Welcome () {
 			Object ();
 
             var image = new Gtk.Image.from_resource ("/com/innatical/id/Settings/earth-americas.svg").get_paintable();
 
+            main_ui_btn.clicked.connect (() => {
+                to_main_ui ();
+            });
+
+            main_ui_btn.sensitive = true;
+            
             welcome_home.set_paintable (image);
 		}
 	}

@@ -32,7 +32,7 @@
                 <property name="title" translatable="yes">Another Page</property>
                 <property name="hexpand">True</property>
                 <property name="child">
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="main_ui_btn">
                     <property name="label" translatable="yes">_Return to the First Page</property>
                     <property name="use-underline">True</property>
                     <property name="halign">center</property>

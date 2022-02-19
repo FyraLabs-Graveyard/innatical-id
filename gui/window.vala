@@ -22,11 +22,26 @@
         [GtkChild]
 		unowned Gtk.Stack stack;
 
+        private Welcome welcome;
+        private Settings settings;
+
 		public Window (Adw.Application app) {
 			Object (application: app);
 
-            var welcome = new InnaticalID.Welcome ();
+            welcome = new Welcome ();
+            welcome.to_main_ui.connect (() => load_settings ());
+            
             stack.add_child (welcome);
 		}
+
+        private void load_settings () {
+            if (settings != null) {
+                settings.destroy ();
+            }
+
+            settings = new Settings ();
+            stack.add_child (settings);
+            stack.visible_child = settings;
+        }
 	}
 }
