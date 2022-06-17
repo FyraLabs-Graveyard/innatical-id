@@ -1,3 +1,6 @@
+# DO NOT USE
+## THIS MAY BREAK YOUR SYSTEM
+
 # Innatical ID Integration for tauOS
 
 Monorepo containing the GUI and daemon for Innatical ID integration
